@@ -1,4 +1,5 @@
 package adapter;
 
-public class EuropeanSocket {
+interface EuropeanSocket {
+    void providePower();
 }

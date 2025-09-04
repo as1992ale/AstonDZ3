@@ -3,18 +3,18 @@ package chainofresponssibility;
 import java.util.logging.Logger;
 
 public class ChainDemo {
-    private static Logger getChainofLogger() {
-        Logger errorLogger = new ErrorLogger(Logger.ERROR);
-        Logger consoleLogger = new ConsoleLogger(Logger.INFO);
+    private static Loger getChainofLoger() {
+        Loger errorLogger = new ErrorLogger(Loger.ERROR);
+        Loger consoleLogger = new ConsoleLogger(Loger.INFO);
 
-        errorLogger.setNextLogger(consoleLogger);
+        errorLogger.setNextLoger(consoleLogger);
         return errorLogger;
     }
 
     public static void main(String[] args) {
-        Logger loggerChain = getChainofLogger();
+        Loger loggerChain = getChainofLoger();
 
-        loggerChain.logMessage(Logger.INFO,"This is an information");
-        loggerChain.logMessage(Logger.INFO, "This is an error information");
+        loggerChain.logMessage(Loger.INFO,"This is an information");
+        loggerChain.logMessage(Loger.INFO, "This is an error information");
     }
 }

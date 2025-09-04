@@ -1,4 +1,6 @@
 package decorator;
 
-public class Coffe {
+interface Coffe {
+    double getCost();
+    String getDescription();
 }

@@ -7,7 +7,7 @@ public class StrategyDemo {
         shoppingCart.setPaymentStrategy( new CreditCardPaymentStrategy());
         shoppingCart.checkout(1000);
 
-        shoppingCart.setPaymentStrategy(new QIWIStrategy());
+        shoppingCart.setPaymentStrategy(new QIWIPaymentStrategy());
         shoppingCart.checkout(2000);
     }
 }
